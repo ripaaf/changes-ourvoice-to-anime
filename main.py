@@ -22,8 +22,6 @@ def speak(text, lang):
     while pygame.mixer.music.get_busy():
         time.sleep(0.1)
 
-
-
 async def synthesize(text, speaker):
     async with Client() as client:
         audio_query = await client.create_audio_query(text, speaker=speaker)
